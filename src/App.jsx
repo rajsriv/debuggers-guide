@@ -25,7 +25,8 @@ function App() {
   // Smooth scroll handler for sidebar clicks
   const scrollToSection = (id) => {
     setActiveSection(id);
-    const element = document.getElementById(`section-${id}`);
+    // Find the first element that starts with this section ID (handles section-02-part1 etc)
+    const element = document.querySelector(`[id^="section-${id}"]`);
     const container = contentAreaRef.current;
     if (element && container) {
        // Scroll the container so the element is nicely at the top
@@ -42,7 +43,8 @@ function App() {
       entries.forEach(entry => {
         // Trigger active state when a section crosses the center of the viewport
         if (entry.isIntersecting) {
-          const id = entry.target.id.replace('section-', '');
+          const rawId = entry.target.id.replace('section-', '');
+          const id = rawId.split('-')[0]; // Extract ID if they use multiple capsules like section-02-part2
           setActiveSection(id);
         }
       });
@@ -61,16 +63,22 @@ function App() {
   // Handle intra-section scroll progress for the white dot
   useEffect(() => {
     const handleScroll = () => {
-      const activeEl = document.getElementById(`section-${activeSection}`);
+      // Find all elements that belong to the active section to calculate total height
+      const activeElements = Array.from(document.querySelectorAll(`[id^="section-${activeSection}"]`));
       const container = contentAreaRef.current;
       
-      if (activeEl && container) {
-        const rect = activeEl.getBoundingClientRect();
+      if (activeElements.length > 0 && container) {
+        const firstRect = activeElements[0].getBoundingClientRect();
+        const lastRect = activeElements[activeElements.length - 1].getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
         
-        // Distance the top of the element has scrolled past the top of the container
-        const scrolledDistance = containerRect.top - rect.top; 
-        const totalScrollable = rect.height - containerRect.height;
+        // Calculate the unified bounding box of all parts of the section combined
+        const combinedTop = firstRect.top;
+        const combinedHeight = lastRect.bottom - firstRect.top;
+        
+        // Distance the top of the combined section has scrolled past the top of the container
+        const scrolledDistance = containerRect.top - combinedTop; 
+        const totalScrollable = combinedHeight - containerRect.height;
         
         let progress = 0;
         if (totalScrollable > 0) {
@@ -79,6 +87,7 @@ function App() {
         setScrollProgress(Math.max(0, Math.min(100, progress)));
       }
     };
+
 
     const container = contentAreaRef.current;
     if (container) {
