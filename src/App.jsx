@@ -4,14 +4,13 @@ import Sidebar from './components/Sidebar';
 import SectionWrapper from './components/SectionWrapper';
 
 const sections = [
-  { id: '00', title: 'RAJ', color: 'var(--color-00)', logo: true },
-  { id: '01', title: 'About', color: 'var(--color-01)' },
-  { id: '02', title: 'R&D Focus', color: 'var(--color-02)' },
-  { id: '03', title: 'Projects', color: 'var(--color-03)' },
-  { id: '04', title: 'Arsenal', color: 'var(--color-04)' },
-  { id: '05', title: 'System', color: 'var(--color-05)' },
-  { id: '06', title: 'Contact', color: 'var(--color-06)' },
-  { id: '07', title: 'Analytics', color: 'var(--color-07)' },
+  { id: '00', title: 'Start', color: 'var(--color-00)', logo: true },
+  { id: '01', title: 'Beginner', color: 'var(--color-01)' },
+  { id: '02', title: 'Intermediate', color: 'var(--color-02)' },
+  { id: '03', title: 'Practice', color: 'var(--color-03)' },
+  { id: '04', title: 'Install', color: 'var(--color-04)' },
+  { id: '05', title: 'Path', color: 'var(--color-05)' },
+  { id: '06', title: 'Guidelines', color: 'var(--color-06)' },
 ];
 
 function App() {

@@ -6,31 +6,50 @@ const HelloSection = ({ sectionData }) => {
       <div className="section-motion-wrapper">
         <div className="section-content section-hello">
           <h1 className="section-number">01</h1>
-          <h2 className="section-title">The Quick Flex</h2>
-          <p className="section-subtitle">
-            Building Tomorrow's Technology Today. 
-            Full Stack Developer | AI & ML Enthusiast.
-          </p>
+          <h2 className="section-title">Beginner Level</h2>
+          <p className="section-subtitle">SECTION 1: FOR STUDENTS OF CLASSES 6–8</p>
           
-          <div className="mock-scroll-content" style={{ marginTop: '100px', paddingBottom: '200px' }}>
-              <h3 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>CURRENT MISSION</h3>
+          <div className="mock-scroll-content" style={{ marginTop: '100px', paddingBottom: '100px' }}>
               <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '60px' }}>
-                Final Year UG & Teaching Assistant for Web Designing.
+                These platforms focus on visual learning, logical thinking, and block-based programming.
               </p>
 
-              <h3 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>AI/ML RESEARCH</h3>
-              <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '60px' }}>
-                Engineering fairness and bias-mitigation in AI models.
-              </p>
-
-              <h3 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>SYSTEM AESTHETICS</h3>
-              <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '60px' }}>
-                Hardcore Arch Linux user with a custom Hyprland setup.
-              </p>
-
-              <h3 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>FOUNDER</h3>
+              <h3 style={{ fontSize: '2rem', marginBottom: '10px' }}>1. Scratch (Official Website)</h3>
               <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '40px' }}>
-                The Debuggers Coding Club — fostering a culture of logic and creation.
+                <a href="https://scratch.mit.edu" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>https://scratch.mit.edu</a><br/>
+                Developed by MIT<br/>
+                Learn coding using drag-and-drop blocks<br/>
+                Create games, animations, and stories
+              </p>
+
+              <h3 style={{ fontSize: '2rem', marginBottom: '10px' }}>2. Code.org (Official Learning Platform)</h3>
+              <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '40px' }}>
+                <a href="https://code.org" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>https://code.org</a><br/>
+                Beginner-friendly coding courses<br/>
+                Hour of Code activities<br/>
+                Game-based learning
+              </p>
+
+              <h3 style={{ fontSize: '2rem', marginBottom: '10px' }}>3. Blockly Games (Official Google Project)</h3>
+              <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '40px' }}>
+                <a href="https://blockly.games" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>https://blockly.games</a><br/>
+                Learn programming logic through puzzles<br/>
+                No installation required
+              </p>
+
+              <h3 style={{ fontSize: '2rem', marginBottom: '10px' }}>4. Khan Academy Computer Programming</h3>
+              <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '40px' }}>
+                <a href="https://www.khanacademy.org/computing" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>https://www.khanacademy.org/computing</a><br/>
+                Free interactive lessons<br/>
+                JavaScript and animation basics
+              </p>
+
+              <h3 style={{ fontSize: '2rem', marginBottom: '10px' }}>5. Python for Kids</h3>
+              <p style={{ maxWidth: '800px', fontSize: '1.2rem', lineHeight: '1.6', marginBottom: '40px' }}>
+                <a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>https://www.python.org/about/gettingstarted/</a><br/>
+                Official Python Beginner Resources<br/>
+                Introduction to Python programming<br/>
+                Official beginner guidance
               </p>
           </div>
         </div>

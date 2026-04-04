@@ -6,33 +6,30 @@ const CareersSection = ({ sectionData }) => {
       <div className="section-motion-wrapper">
         <div className="section-content section-careers">
           <h1 className="section-number">05</h1>
-          <h2 className="section-title">System</h2>
-          <p className="section-subtitle">"I USE ARCH, BTW."</p>
+          <h2 className="section-title">Learning Path</h2>
+          <p className="section-subtitle">SECTION 5: RECOMMENDED ORDER FOR STUDENTS</p>
           
-          <div className="content-item" style={{ marginTop: '60px' }}>
-            <p style={{ fontSize: '1.5rem', maxWidth: '800px', marginBottom: '40px', lineHeight: '1.8' }}>
-              <strong>Distribution:</strong> Arch Linux<br/>
-              <strong>Window Manager:</strong> Hyprland (Wayland)<br/>
-              <strong>Shell:</strong> Zsh with custom Caelestia shell configuration<br/>
-              <strong>Expertise:</strong> Kernel optimization, custom scripts, and system-level performance tuning.
-            </p>
-          </div>
-
-          <div style={{ marginTop: '80px' }}>
-            <h3 className="contact-label">BEYOND THE TERMINAL</h3>
-            <div className="content-grid" style={{ marginTop: '20px' }}>
-              <div className="content-item">
-                <h3>HINDI POETRY</h3>
-                <p>Exploring the intersection of human emotion and societal structures.</p>
-              </div>
-              <div className="content-item">
-                <h3>CHESS</h3>
-                <p>Analyzing patterns and hunting for "Brilliant Moves".</p>
-              </div>
-              <div className="content-item">
-                <h3>LITERATURE</h3>
-                <p>Deep-diving into works like Tagore’s Chaturanga.</p>
-              </div>
+          <div className="roles-list" style={{ marginTop: '80px', display: 'flex', flexDirection: 'column', gap: '60px' }}>
+            <div className="role-item">
+              <h3 style={{ fontSize: '2rem', borderBottom: '2px solid', paddingBottom: '10px', marginBottom: '30px' }}>Classes 6–8</h3>
+              <ol style={{ fontSize: '1.5rem', lineHeight: '2', paddingLeft: '40px' }}>
+                <li>Start with Scratch</li>
+                <li>Move to Code.org</li>
+                <li>Try Blockly Games</li>
+                <li>Learn basic Python concepts</li>
+              </ol>
+            </div>
+            
+            <div className="role-item">
+              <h3 style={{ fontSize: '2rem', borderBottom: '2px solid', paddingBottom: '10px', marginBottom: '30px' }}>Classes 9–12</h3>
+              <ol style={{ fontSize: '1.5rem', lineHeight: '2', paddingLeft: '40px' }}>
+                <li>Install Python</li>
+                <li>Learn Python basics</li>
+                <li>Learn Linux commands</li>
+                <li>Learn Git and GitHub</li>
+                <li>Start web development (HTML/CSS)</li>
+                <li>Practice coding problems</li>
+              </ol>
             </div>
           </div>
         </div>
