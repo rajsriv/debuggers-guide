@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-color: #F2EFE9;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-radius-main: 24px;
+  --sidebar-width: 100px;
+  
+  /* Section Colors */
+  --color-00: #FFFFFF; /* Raw Materials */
+  --color-01: #FF5C00; /* Hello */
+  --color-02: #6F2CFE; /* Approach */
+  --color-03: #000000; /* Work */
+  --color-04: #2D42ED; /* Talent */
+  --color-05: #FE013D; /* Careers */
+  --color-06: #FFF200; /* Contact */
+  --color-07: #00FF00; /* Unusual Index */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow: hidden; /* We'll handle scrolling within the main content area */
+  height: 100vh;
+  width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 12px;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  #root {
+    flex-direction: column;
+    padding: 8px;
+    gap: 8px;
+    overflow: hidden;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,163 @@
+.sidebar {
+  background: transparent;
+  z-index: 1000;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sidebar.desktop {
+  height: 100%;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px 0;
+  overflow: hidden;
+}
+
+/* Hide scrollbar for sidebar */
+.sidebar.desktop::-webkit-scrollbar {
+  width: 0px;
+}
+
+.sidebar.mobile {
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+}
+
+.sidebar-inner {
+  display: flex;
+  gap: 12px;
+}
+
+.sidebar.desktop .sidebar-inner {
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar.mobile .sidebar-inner {
+  flex-direction: row;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+}
+
+.sidebar-item {
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  padding: 20px;
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar.desktop .sidebar-item {
+  width: 100%;
+  flex: 1;
+  min-height: 40px;
+  margin-bottom: 8px;
+}
+
+.sidebar.desktop .sidebar-item.active {
+  flex: 5;
+}
+
+.sidebar.mobile .sidebar-item {
+  min-width: 70px;
+  height: 70px;
+}
+
+.sidebar.mobile .sidebar-item.active {
+  min-width: 160px;
+}
+
+.item-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.section-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  text-align: left;
+}
+
+.item-number {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.item-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: -2px;
+}
+
+.progress-dot {
+  position: absolute;
+  right: 12px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  transition: top 0.1s linear;
+  z-index: 10;
+}
+
+/* Base text colors for active states */
+.sidebar-item.active {
+  color: #fff;
+}
+
+/* Specific logic for light backgrounds like 00, 06, 07 */
+.sidebar-item.active[style*="var(--color-00)"],
+.sidebar-item.active[style*="var(--color-06)"],
+.sidebar-item.active[style*="var(--color-07)"] {
+  color: #000;
+}
+
+.sidebar-item.active[style*="var(--color-00)"] .progress-dot,
+.sidebar-item.active[style*="var(--color-06)"] .progress-dot,
+.sidebar-item.active[style*="var(--color-07)"] .progress-dot {
+  background: #000;
+}
+
+/* Custom Scrollbar for Mobile */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 0px;
+}
