@@ -23,7 +23,7 @@ const Sidebar = ({ sections, activeSection, setActiveSection, isMobile, scrollPr
               <div className="item-content">
                 {section.id === '00' ? (
                   <div className="logo-placeholder">
-                    <span className="logo-text animate-logo">RAJ</span>
+                    <span className="logo-text animate-logo">BHU</span>
                   </div>
                 ) : (
                   <div className="section-labels">

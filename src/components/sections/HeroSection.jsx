@@ -7,10 +7,9 @@ const HeroSection = ({ isFirstLoad, sectionData }) => {
         <div className="section-content hero-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <div className="hero-logo-container">
             <h1 className={`hero-logo-main ${isFirstLoad ? 'animate-logo-text' : ''}`} style={{ fontSize: '4rem', marginBottom: '2rem' }}>
-                <span>C</span>
-                <span>O</span>
-                <span>D</span>
-                <span>E</span>
+                <span>B</span>
+                <span>H</span>
+                <span>U</span>
             </h1>
             <div className="hero-description" style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
                 <h2 style={{ fontSize: '2.5rem', marginBottom: '20px', fontWeight: 'bold' }}>The Debuggers Coding Club</h2>

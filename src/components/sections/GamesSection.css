@@ -1,0 +1,175 @@
+.games-section-container {
+    background-color: var(--color-pragyan, #006D6B);
+    color: white;
+}
+
+.games-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+}
+
+.games-main-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.debuggers-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #006D6B;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.club-name {
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.dept-name {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.game-card {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.game-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.game-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.game-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.how-to-play {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.game-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.resource-card {
+    grid-column: span 1;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+.resource-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #FFF;
+}
+
+.resource-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.partners-bar {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    color: #006D6B;
+}
+
+.partner-item {
+    font-weight: 800;
+    font-size: 0.7rem;
+    text-align: center;
+    max-width: 150px;
+}
+
+@media (max-width: 1024px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .games-main-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .games-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .partners-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+}

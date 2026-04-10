@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import SectionWrapper from './components/SectionWrapper';
 
 const sections = [
+  { id: 'event', title: 'Games', color: 'var(--color-pragyan)' },
   { id: '00', title: 'Start', color: 'var(--color-00)', logo: true },
   { id: '01', title: 'Beginner', color: 'var(--color-01)' },
   { id: '02', title: 'Intermediate', color: 'var(--color-02)' },

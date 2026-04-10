@@ -10,10 +10,12 @@ import WorkSection from './sections/WorkSection';
 import TalentSection from './sections/TalentSection';
 import CareersSection from './sections/CareersSection';
 import ContactSection from './sections/ContactSection';
+import GamesSection from './sections/GamesSection';
 
 const SectionWrapper = ({ sections, isFirstLoad }) => {
   const renderSectionContent = (section) => {
     switch (section.id) {
+      case 'event': return <GamesSection sectionData={section} />;
       case '00': return <HeroSection isFirstLoad={isFirstLoad} sectionData={section} />;
       case '01': return <HelloSection sectionData={section} />;
       case '02': return <ApproachSection sectionData={section} />;
