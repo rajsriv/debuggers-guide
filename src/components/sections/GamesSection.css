@@ -108,6 +108,41 @@
     opacity: 0.8;
 }
 
+.game-download-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    width: fit-content;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.game-download-btn:hover {
+    background: white;
+    color: #006D6B;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-color: white;
+}
+
+.game-download-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.game-download-btn:hover svg {
+    transform: translateY(2px);
+}
+
 .resource-card {
     grid-column: span 1;
     background: rgba(0, 0, 0, 0.3);

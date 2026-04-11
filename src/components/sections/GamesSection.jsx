@@ -17,7 +17,8 @@ const GamesSection = ({ sectionData }) => {
     {
       id: 3,
       title: "THE MIND READING CARD TRICK",
-      description: "This looks like magic, but it's pure binary math. We'll show you a series of cards, each containing a set of numbers, and ask you to tell us only which cards your secret number appears on. In just a few seconds, we can tell you exactly what number you picked. The secret? Your number can be converted to a 5 digit binary number. Each card represents a binary place value - and your answers tell us which bits are 1s and which are 0s."
+      description: "This looks like magic, but it's pure binary math. We'll show you a series of cards, each containing a set of numbers, and ask you to tell us only which cards your secret number appears on. In just a few seconds, we can tell you exactly what number you picked. The secret? Your number can be converted to a 5 digit binary number. Each card represents a binary place value - and your answers tell us which bits are 1s and which are 0s.",
+      downloadUrl: "/mind reading cards.pdf"
     },
     {
       id: 4,
@@ -66,6 +67,20 @@ const GamesSection = ({ sectionData }) => {
               <div className="game-card-body">
                 <h4 className="how-to-play">How to play?</h4>
                 <p className="game-description">{game.description}</p>
+                {game.downloadUrl && (
+                  <a 
+                    href={game.downloadUrl} 
+                    download 
+                    className="game-download-btn"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span>DOWNLOAD CARDS</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 15L12 3M12 15L8 11M12 15L16 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 17L2 18C2 19.6569 3.34315 21 5 21L19 21C20.6569 21 22 19.6569 22 18L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
